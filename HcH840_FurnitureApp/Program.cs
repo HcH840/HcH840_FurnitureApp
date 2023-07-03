@@ -3,14 +3,14 @@ Console.WriteLine("Furniture Store");
 using System;
 using System.Collections.Generic; // Using directives outside the namespace
 
-namespace ConsoleApp.Test3
+namespace FurnitureApp
 {
     public class Furniture
     {
         public string Mark { get; set; }
         public string Type { get; set; }
-        public int Year { get; set; } // Declare Furniture specs (Mark, type:chair, table, dresser... , year of Production) 
-        public Furniture(string mark, string type, int year)
+        public string Year { get; set; } // Declare Furniture specs (Mark, type:chair, table, dresser... , year of Production dd/mm/yy format) 
+        public Furniture(string mark, string type, string year)
         {
             Mark = mark; Type = type; Year = year;
         } // with Furniture(); write classname.attributename ex: frt.Mark = ...
@@ -25,7 +25,7 @@ namespace ConsoleApp.Test3
             Console.WriteLine("Enter Item Type:");
             string type = Console.ReadLine();
             Console.WriteLine("Enter Item Production Year:");
-            int year = Convert.ToInt32(Console.Readline());
+            string year = Console.Readline();
             Furniture frt = new Furniture(mark, type, year);
             list.Add(frt);
         } // method to add new item on store
@@ -52,7 +52,7 @@ namespace ConsoleApp.Test3
                 Console.WriteLine("Enter new Item Type:");
                 frt.Type = Console.ReadLine();
                 Console.WriteLine("Enter Item Production Year:");
-                frt.Year = Convert.ToInt32(Console.Readline());
+                frt.Year = Console.Readline();
             }
             else Console.WriteLine("Item does not exist to modify.");
         } // method to modify item by mark if exists
