@@ -3,7 +3,7 @@ Console.WriteLine("Furniture Store");
 using System;
 using System.Collections.Generic; // Using directives outside the namespace
 
-namespace FurnitureApp
+namespace HcH840_FurnitureApp
 {
     public class Furniture
     {
